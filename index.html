@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudentDex</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+            transition: background 0.3s, color 0.3s, transform 0.3s, box-shadow 0.3s;
+        }
+
+        body {
+            background: var(--bg-color);
+            color: var(--text-color);
+            min-height: 100vh;
+        }
+
+        :root {
+            --bg-color: #f5f5f5; /* Light background */
+            --text-color: #333333; /* Dark text */
+            --primary-color: #2dd4bf; /* Teal */
+            --secondary-color: #ffffff; /* White for cards */
+            --card-bg: #ffffff;
+            --skill-bar-bg: #e0e0e0; /* Light gray for skill bars */
+            --skill-bar-fill: #2dd4bf; /* Teal for skill bar fill */
+            --border-color: #2dd4bf44; /* Semi-transparent teal */
+            --icon-color: #2dd4bf; /* Icon color */
+        }
+
+        body.dark-theme {
+            --bg-color: #0f0f0f; /* Dark background */
+            --text-color: #e0e0e0; /* Light text */
+            --primary-color: #2dd4bf; /* Teal (blue-green) */
+            --secondary-color: #1e1e1e; /* Darker background for cards */
+            --card-bg: #1e1e1e;
+            --skill-bar-bg: #333333; /* Dark gray for skill bars */
+            --skill-bar-fill: #2dd4bf; /* Teal for skill bar fill */
+            --border-color: #2dd4bf44; /* Semi-transparent teal */
+            --icon-color: #2dd4bf; /* Icon color */
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 0;
+            position: relative;
+        }
+
+        .logo {
+            font-size: 2.5em;
+            color: var(--primary-color);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .theme-toggle {
+            position: absolute;
+            top: 40px;
+            right: 20px;
+            background: var(--primary-color);
+            border: none;
+            padding: 10px 15px;
+            border-radius: 50%;
+            cursor: pointer;
+            color: var(--text-color);
+            font-size: 1.2em;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .theme-toggle:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 15px var(--primary-color);
+        }
+
+        .search-bar {
+            width: 100%;
+            max-width: 500px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        #searchInput {
+            width: 100%;
+            padding: 15px 30px;
+            border: 2px solid var(--primary-color);
+            border-radius: 30px;
+            background: var(--secondary-color);
+            color: var(--text-color);
+            font-size: 1.1em;
+            transition: all 0.3s;
+        }
+
+        #searchInput:focus {
+            outline: none;
+            box-shadow: 0 0 15px var(--border-color);
+        }
+
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+
+        .student-card {
+            background: var(--card-bg);
+            border-radius: 15px;
+            padding: 20px;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 2px solid var(--student-color);
+            backdrop-filter: blur(10px);
+        }
+
+        .student-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .student-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            border: 3px solid var(--student-color);
+        }
+
+        .student-name {
+            text-align: center;
+            font-size: 1.2em;
+            color: var(--student-color);
+            font-weight: 600;
+        }
+
+        /* Detail Page Styles */
+        .detail-container {
+            display: none;
+            padding: 40px 0;
+        }
+
+        .back-button {
+            background: var(--student-color);
+            border: none;
+            color: var(--text-color);
+            font-size: 1.2em;
+            cursor: pointer;
+            margin-bottom: 30px;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background 0.3s, transform 0.3s;
+        }
+
+        .back-button:hover {
+            background: var(--skill-bar-fill);
+            transform: translateY(-2px);
+        }
+
+        .detail-card {
+            background: var(--card-bg);
+            border-radius: 20px;
+            padding: 30px;
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 30px;
+            border: 2px solid var(--student-color);
+        }
+
+        .detail-image {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 15px;
+            border: 3px solid var(--student-color);
+        }
+
+        .detail-info h1 {
+            color: var(--student-color);
+            margin-bottom: 20px;
+            font-size: 2em;
+        }
+
+        .stats-section {
+            margin-bottom: 25px;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+
+        .stat-item {
+            background: var(--secondary-color);
+            padding: 15px;
+            border-radius: 10px;
+            border: 1px solid var(--border-color);
+        }
+
+        .skill-bar-container {
+            margin: 15px 0;
+        }
+
+        .skill-label {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 5px;
+            font-weight: 500;
+        }
+
+        .skill-bar {
+            height: 10px;
+            background: var(--skill-bar-bg);
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .skill-progress {
+            height: 100%;
+            background: var(--student-color);
+            border-radius: 5px;
+            transition: width 0.5s ease;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            font-size: 1.5em;
+            transition: transform 0.3s, color 0.3s;
+        }
+
+        .social-links a:hover {
+            transform: scale(1.2);
+        }
+
+        /* Custom social icon colors */
+        .fa-instagram { color: #E1306C; } /* Instagram pink */
+        .fa-snapchat { color: #FFFC00; } /* Snapchat yellow */
+        .fa-x-twitter { color: #000000; } /* X (Twitter) black */
+
+        /* Friends and Hobbies styles */
+        .friends-section, .hobbies-section {
+            margin: 20px 0;
+        }
+
+        .friends-grid, .hobbies-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .friend-chip, .hobby-chip {
+            background: var(--secondary-color);
+            padding: 8px 15px;
+            border-radius: 20px;
+            border: 1px solid var(--border-color);
+            font-size: 0.9em;
+        }
+
+        /* Future Vision section */
+        .future-vision {
+            background: var(--secondary-color);
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+            border: 1px solid var(--border-color);
+        }
+
+        @media (max-width: 768px) {
+            .detail-card {
+                grid-template-columns: 1fr;
+            }
+
+            .detail-image {
+                height: 300px;
+            }
+        }
+    </style>
+</head>
+<body class="light-theme">
+    <div class="container">
+        <header>
+            <div class="logo">StudentDex</div>
+            <button class="theme-toggle" onclick="toggleTheme()">
+                <i class="fas fa-sun"></i>
+            </button>
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Search students...">
+            </div>
+        </header>
+
+        <div class="cards-grid" id="cardsContainer"></div>
+
+        <div class="detail-container" id="detailContainer">
+            <button class="back-button" onclick="showMainPage()"><i class="fas fa-arrow-left"></i> Back</button>
+            <div class="detail-card" id="studentDetail"></div>
+        </div>
+    </div>
+    <script src="info.js"></script>
+
+    <script>
+ 
+        // Generate unique color based on name
+        function getStudentColor(name) {
+            const hash = name.split('').reduce((acc, char) => char.charCodeAt(0) + acc, 0);
+            return `hsl(${hash % 360}, 70%, 50%)`;
+        }
+
+        // Calculate dynamic age
+        function calculateAge(birthDate) {
+            const today = new Date();
+            let age = today.getFullYear() - birthDate.getFullYear();
+            const m = today.getMonth() - birthDate.getMonth();
+            if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) age--;
+            return age;
+        }
+
+        function renderStudents(filteredStudents) {
+            const container = document.getElementById('cardsContainer');
+            container.innerHTML = filteredStudents.map(student => `
+                <div class="student-card" onclick="showDetail(${student.id})" 
+                     style="--student-color: ${getStudentColor(student.name)}">
+                    <img src="${student.profileImage}" class="student-image" alt="${student.name}">
+                    <h2 class="student-name">${student.name}</h2>
+                </div>
+            `).join('');
+        }
+
+        function showDetail(studentId) {
+            const student = students.find(s => s.id === studentId);
+            if (!student) return;
+
+            const studentColor = getStudentColor(student.name);
+            const detailContainer = document.getElementById('detailContainer');
+            const cardsContainer = document.getElementById('cardsContainer');
+            
+            document.getElementById('studentDetail').innerHTML = `
+                <img src="${student.profileImage}" class="detail-image" alt="${student.name}">
+                <div class="detail-info">
+                    <h1 style="color: ${studentColor}">${student.name}</h1>
+                    <div class="stats-section">
+                        <h3>Bio</h3>
+                        <p>${student.bio}</p>
+                    </div>
+                    
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <h4>Roll Number</h4>
+                            <p>${student.rollNumber}</p>
+                        </div>
+                        <div class="stat-item">
+                            <h4>Age</h4>
+                            <p>${calculateAge(student.birthDate)}</p>
+                        </div>
+                        <div class="stat-item">
+                            <h4>Gender</h4>
+                            <p>${student.gender}</p>
+                        </div>
+                        <div class="stat-item">
+                            <h4>Fun name</h4>
+                            <p>${student.funname}</p>
+                        </div>
+                    </div>
+
+                    <div class="stats-section">
+                        <h3>Skills</h3>
+                        ${Object.entries(student.skills).map(([skill, value]) => `
+                            <div class="skill-bar-container">
+                                <div class="skill-label">
+                                    <span>${skill}</span>
+                                    <span>${value}/10</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: ${value * 10}%; background: ${studentColor}"></div>
+                                </div>
+                            </div>
+                        `).join('')}
+                    </div>
+
+                    <div class="friends-section">
+                        <h3>Friends</h3>
+                        <div class="friends-grid">
+                            ${student.friends.map(friend => `
+                                <div class="friend-chip">${friend}</div>
+                            `).join('')}
+                        </div>
+                    </div>
+
+                    <div class="hobbies-section">
+                        <h3>Hobbies</h3>
+                        <div class="hobbies-grid">
+                            ${student.hobbies.map(hobby => `
+                                <div class="hobby-chip">${hobby}</div>
+                            `).join('')}
+                        </div>
+                    </div>
+
+                    <div class="future-vision">
+                        <h3>Where do we see ${student.name} in 10 years?</h3>
+                        <p>${student.futureVision}</p>
+                    </div>
+
+                    <div class="stats-section">
+                        <h3>Contact</h3>
+                        <p>📧 ${student.contact.email}</p>
+                        <p>📱 ${student.contact.phone}</p>
+                        <div class="social-links">
+                            ${Object.entries(student.socialLinks).map(([platform, url]) => `
+                                <a href="${url}" target="_blank">
+                                    <i class="fab ${platform === 'x' ? 'fa-x-twitter' : 'fa-' + platform}"></i>
+                                </a>
+                            `).join('')}
+                        </div>
+                    </div>
+                </div>
+            `;
+
+            cardsContainer.style.display = 'none';
+            detailContainer.style.display = 'block';
+        }
+
+        function showMainPage() {
+            document.getElementById('cardsContainer').style.display = 'grid';
+            document.getElementById('detailContainer').style.display = 'none';
+        }
+
+        function toggleTheme() {
+            document.body.classList.toggle('dark-theme');
+            const themeIcon = document.querySelector('.theme-toggle i');
+            if (document.body.classList.contains('dark-theme')) {
+                themeIcon.classList.remove('fa-sun');
+                themeIcon.classList.add('fa-moon');
+            } else {
+                themeIcon.classList.remove('fa-moon');
+                themeIcon.classList.add('fa-sun');
+            }
+        }
+
+        document.getElementById('searchInput').addEventListener('input', (e) => {
+            const searchTerm = e.target.value.toLowerCase();
+            const filtered = students.filter(student => 
+                student.name.toLowerCase().includes(searchTerm)
+            );
+            renderStudents(filtered);
+        });
+
+        // Initial render
+        renderStudents(students);
+    </script>
+</body>
+</html>
