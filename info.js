@@ -12,20 +12,20 @@ const students = [
              "Akshit Agarwal" , "Saksham Sharma" , "Ayush Kulhari " , "Jatin Choudhary","Aarnav","Yuvraj Sharma",
              "Amaad","Ayaan","Vedant Dadhich","Mrityunjay Kumawat"],
         skills: {
-            Looks : 10,
-            knowledge: 10,
-            humor: 10,
-            Creativity: 10,
-            Sports: 10,
-        },
-        hobbies: ["👩🏻‍💻Coding", "⚽Football", "🏏Cricket","🏸Badminton","🤖AI",""],
+            Looks : 1,
+            knowledge: 1,
+            humor: 1,
+            Creativity: 1,
+            Sports: 1,
+},
+        hobbies: ["👩🏻‍💻Coding", "🏏Cricket","🏸Badminton","🤖AI","🎨Graphic Designing","🎵Music"],
         socialLinks: {
             instagram: "https://instagram.com/fr_labhesh",
             snapchat: "https://snapchat.com/labhesh_tiwari",
             x: "https://x.com/labhesh_tiwari"
         },
         contact: {
-            email: "labheshtiwari@example.com",
+            area: "Banipark,Jaipur",
             phone: "+91 8005964259"
         },
         futureVision: "Billionaire?"
@@ -33,9 +33,9 @@ const students = [
     {
         id: 2,
         name: "Priyansh Dusad",
-    profileImage: "dev gupta.png",
+    profileImage: "Male.png",
         birthDate: new Date(2009, 8, 23),
-        bio: "Aspiring engineer with a passion for physics and coding.",
+        bio: "just another topper,friends to everone,loves australia",
         rollNumber: 31,
         gender: "Male",
         funname: "Charas Ganja",
@@ -44,29 +44,29 @@ const students = [
         skills: {
             Looks : 7,
             knowledge: 9,
-            humor: 7,
+            humor: 10,
             Creativity: 8,
             Sports: 9,
         },
-        hobbies: ["Coding", "Football", "Reading Sci-Fi"],
+        hobbies: ["🎫Studying", "🏏Cricket", "🎶Musics and Podcast "],
         favoriteSubjects: ["Mathematics", "Physics", "Computer Science"],
         socialLinks: {
-            instagram: "https://instagram.com/johndoe",
+            instagram: "https://instagram.com/priyanshdusad72",
             snapchat: "https://snapchat.com/johndoe",
             x: "https://x.com/johndoe"
         },
         contact: {
-            email: "johndoe@example.com",
-            phone: "+91 9876543210"
+            area: "Vidhyadhar Nagar",
+            phone: "+91 98295 44539"
         },
-        futureVision: "Leading a tech startup revolutionizing renewable energy solutions."
+        futureVision: "Leading his Buisness."
     },
     {
         id: 3 ,
         name: "Maulik Agarwal",
-        profileImage: "dev gupta.png",
+        profileImage: "male.png",
         birthDate: new Date(2009, 5, 30),
-        bio: "",
+        bio: "Loves doing art ",
         rollNumber: 24,
         gender: "Male",
         funname: "Pure Rajasthani",
@@ -86,10 +86,10 @@ const students = [
             x: "https://x.com/johndoe"
         },
         contact: {
-            email: "johndoe@example.com",
+            area: "Murlipura",
             phone: "+91 9876543210"
         },
-        futureVision: "Leading a tech startup revolutionizing renewable energy solutions."
+        futureVision: ""
     },
     {
         id: 4,
@@ -117,7 +117,7 @@ const students = [
             x: "https://x.com/johndoe"
         },
         contact: {
-            email: "johndoe@example.com",
+            area: "johndoe@example.com",
             phone: "+91 9653855184"
         },
         futureVision: "Dominating the fashion industry."
@@ -125,127 +125,125 @@ const students = [
     {
         id: 5,
         name: "Lavin Singh",
-        profileImage: "dev gupta.png",
+        profileImage: "images/lavin.png",
         birthDate: new Date(2009, 2, 15),
-        bio: "Aspiring engineer with a passion for physics and coding.",
+        bio: "Just Living🌗 , Loves to do Editing",
         rollNumber: 22,
         gender: "Male",
-        funname: "Red Phoenix",
-        friends: ["Jane Smith", "Mike Johnson", "Emma Watson"],
+        funname: "Rohit Sharma Ka Beta",
+        friends: ["Labhesh Tiwari", "Jatin Choudhary", "Yuvraj Sharma","Priyansh Dusad","Maulik Agarwal","Ronak Soni"],
         skills: {
-            Looks : 7,
+           Looks : 9,
             knowledge: 9,
-            humor: 7,
-            Creativity: 8,
+            humor: 9,
+            Creativity: 7,
             Sports: 9,
         },
-        hobbies: ["Coding", "Football", "Reading Sci-Fi"],
+        hobbies: ["📽Editing","🏏Cricket", "🎲Rubiks Cube", "🗺Geography","🎵Music"],
         favoriteSubjects: ["Mathematics", "Physics", "Computer Science"],
         socialLinks: {
-            instagram: "https://instagram.com/johndoe",
+            instagram: "https://instagram.com/lavinrizzin",
             snapchat: "https://snapchat.com/johndoe",
             x: "https://x.com/johndoe"
         },
         contact: {
-            email: "johndoe@example.com",
-            phone: "+91 9876543210"
+            area: "Chandpole",
+            phone: "+91 "
         },
-        futureVision: "Leading a tech startup revolutionizing renewable energy solutions."
+        futureVision: "Top level Doctor."
     },
                 {
         id: 6,
         name: "Ronak Soni",
-        profileImage: "dev gupta.png",
+        profileImage: "Male.png",
         birthDate: new Date(2009, 2, 15),
-        bio: "Aspiring engineer with a passion for physics and coding.",
+        bio: "Wanna be Sigma👿",
         rollNumber: 35,
         gender: "Male",
-        funname: "Red Phoenix",
-        friends: ["Jane Smith", "Mike Johnson", "Emma Watson"],
+        funname: "Pinkyyy, Shawty ",
+        friends: ["Labhesh Tiwari", "Priyansh Dusad", "Lavin Singh","Akshit Agarwal","Mrityunjay","Maulik Trivedi","Ayush"],
         skills: {
-            Looks : 7,
-            knowledge: 9,
-            humor: 7,
-            Creativity: 8,
-            Sports: 9,
+            Looks : 8,
+            knowledge: 7,
+            humor: 9,
+            Creativity: 10,
+            Sports: 8,
         },
-        hobbies: ["Coding", "Football", "Reading Sci-Fi"],
+        hobbies: ["🎥Editing", "⚽Football", "🏸Badminton",""],
         favoriteSubjects: ["Mathematics", "Physics", "Computer Science"],
         socialLinks: {
-            instagram: "https://instagram.com/johndoe",
+            instagram: "https://instagram.com/ronzone96",
             snapchat: "https://snapchat.com/johndoe",
             x: "https://x.com/johndoe"
         },
         contact: {
-            email: "johndoe@example.com",
+            area: "Vidhyadhar Nagar",
             phone: "+91 9876543210"
         },
-        futureVision: "Leading a tech startup revolutionizing renewable energy solutions."
+        futureVision: "Doing something creative"
     },
     {
         id: 7,
         name: "Akshit Agarwal",
-        profileImage: "dev gupta.png",
+        profileImage: "Male.png",
         birthDate: new Date(2009, 2, 15),
-        bio: "Aspiring engineer with a passion for physics and coding.",
+        bio: "",
         rollNumber: 3,
         gender: "Male",
-        funname: "Red Phoenix",
-        friends: ["Jane Smith", "Mike Johnson", "Emma Watson"],
+        funname: "Kaalu",
+        friends: ["Labhesh Tiwari", "Ayush Kulhari", "Mrityunjay Kumawat","Saksham Sharma",""],
         skills: {
-            Looks : 7,
+            Looks : 8,
             knowledge: 9,
-            humor: 7,
+            humor: 8.7,
             Creativity: 8,
             Sports: 9,
         },
-        hobbies: ["Coding", "Football", "Reading Sci-Fi"],
+        hobbies: ["🏸Badminton", "🎵Music", ""],
         favoriteSubjects: ["Mathematics", "Physics", "Computer Science"],
         socialLinks: {
-            instagram: "https://instagram.com/johndoe",
+            instagram: "https://instagram.com/akshit_agarwal",
             snapchat: "https://snapchat.com/johndoe",
             x: "https://x.com/johndoe"
         },
         contact: {
-            email: "johndoe@example.com",
+            area: "Shastri Nagar",
             phone: "+91 9876543210"
         },
-        futureVision: "Leading a tech startup revolutionizing renewable energy solutions."
+        futureVision: "Buisness Man."
     },
     {
         id: 8,
         name: "Ayush kulhari",
-        profileImage: "dev gupta.png",
-        birthDate: new Date(2009, 2, 15),
-        bio: "Aspiring engineer with a passion for physics and coding.",
+        profileImage: "images/ayush.png",
+        birthDate: new Date(2009, 4, 28),
+        bio: "I AM JUST A RANDOM GUY WHO PLAYS GAMES ALL DAY....",
         rollNumber: 8,
         gender: "Male",
-        funname: "Red Phoenix",
-        friends: ["Jane Smith", "Mike Johnson", "Emma Watson"],
+        funname: "Meetha ",
+        friends: ["Labhesh Tiwari","Akshit Agarwal","Saksham Sharma","Mrityunjay Kumawat","Priyansh Dusad","Maulik Trivedi"],
         skills: {
-            Looks : 7,
-            knowledge: 9,
-            humor: 7,
-            Creativity: 8,
-            Sports: 9,
+            Looks : 8,
+            knowledge: 8,
+            humor: 10,
+            Creativity: 7,
+            Sports: 7.5,
         },
-        hobbies: ["Coding", "Football", "Reading Sci-Fi"],
-        favoriteSubjects: ["Mathematics", "Physics", "Computer Science"],
+        hobbies: ["🎮Gaming", "⚽Football", "🗾Anime"],
+        favoriteSubjects: ["Mathematics", "Computer Science"],
         socialLinks: {
-            instagram: "https://instagram.com/johndoe",
-            snapchat: "https://snapchat.com/johndoe",
-            x: "https://x.com/johndoe"
+            instagram: "https://instagram.com/",
         },
         contact: {
-            email: "johndoe@example.com",
-            phone: "+91 9876543210"
+            area: "Shastri Nagar,Jaipur",
+            phone: "+91 9588220736"
         },
-        futureVision: "Leading a tech startup revolutionizing renewable energy solutions."
+        futureVision: "PROBABLY GAMING IN MY ROOM."
     },
     {
         id: 9,
         name: "Saksham Sharma",
-        profileImage: "dev gupta.png",
+        profileImage: "Male.png",
         birthDate: new Date(2009, 2, 15),
         bio: "Aspiring engineer with a passion for physics and coding.",
         rollNumber: 36,
@@ -267,7 +265,7 @@ const students = [
             x: "https://x.com/johndoe"
         },
         contact: {
-            email: "johndoe@example.com",
+            area: "johndoe@example.com",
             phone: "+91 9876543210"
         },
         futureVision: "Leading a tech startup revolutionizing renewable energy solutions."
@@ -275,7 +273,7 @@ const students = [
     {
         id: 10,
         name: "Mrityunjay kumawat",
-        profileImage: "dev gupta.png",
+        profileImage: "Male.png",
         birthDate: new Date(2009, 2, 15),
         bio: "Aspiring engineer with a passion for physics and coding.",
         rollNumber: 29,
@@ -297,7 +295,7 @@ const students = [
             x: "https://x.com/johndoe"
         },
         contact: {
-            email: "johndoe@example.com",
+            area: "johndoe@example.com",
             phone: "+91 9876543210"
         },
         futureVision: "Leading a tech startup revolutionizing renewable energy solutions."
@@ -305,7 +303,7 @@ const students = [
     {
         id: 11,
         name: "Vedant Dadhich",
-        profileImage: "dev gupta.png",
+        profileImage: "Male.png",
         birthDate: new Date(2009, 2, 15),
         bio: "Aspiring engineer with a passion for physics and coding.",
         rollNumber: 42,
@@ -327,47 +325,47 @@ const students = [
             x: "https://x.com/johndoe"
         },
         contact: {
-            email: "johndoe@example.com",
+            area: "johndoe@example.com",
             phone: "+91 9876543210"
         },
-        futureVision: "Leading a tech startup revolutionizing renewable energy solutions."
+        futureVision: "."
     },
 
     {
         id: 12,
         name: "Aarnav Choudhary",
-        profileImage: "dev gupta.png",
+        profileImage: "images/aarnav.png",
         birthDate: new Date(2009, 2, 15),
-        bio: "Aspiring engineer with a passion for physics and coding.",
+        bio: "I got enough cash , Baby💸💸.",
         rollNumber: 1,
         gender: "Male",
-        funname: "Red Phoenix",
-        friends: ["Jane Smith", "Mike Johnson", "Emma Watson"],
+        funname: "Unevolved, Neanthedral man, Defender m lafander",
+        friends: ["Labhesh Tiwari", "Robin Sood"],
         skills: {
-            Looks : 7,
-            knowledge: 9,
-            humor: 7,
-            Creativity: 8,
-            Sports: 9,
+            Looks : 7.5,
+            knowledge: 7,
+            humor: 9,
+            Creativity: 7,
+            Sports: 8,
         },
-        hobbies: ["Coding", "Football", "Reading Sci-Fi"],
+        hobbies: ["🏎Driving Cars","🔫Badmosi"],
         favoriteSubjects: ["Mathematics", "Physics", "Computer Science"],
         socialLinks: {
-            instagram: "https://instagram.com/johndoe",
+            instagram: "https://instagram.com/aarnav_0066",
             snapchat: "https://snapchat.com/johndoe",
             x: "https://x.com/johndoe"
         },
         contact: {
-            email: "johndoe@example.com",
-            phone: "+91 9876543210"
+            area: "Noida",
+            phone: "+91 "
         },
-        futureVision: "Leading a tech startup revolutionizing renewable energy solutions."
+        futureVision: "Chlling in some new cars"
     },
 
     {
         id: 13,
         name: "Jatin Choudhary",
-        profileImage: "dev gupta.png",
+        profileImage: "Male.png",
         birthDate: new Date(2009, 2, 15),
         bio: "Aspiring engineer with a passion for physics and coding.",
         rollNumber: 16,
@@ -389,7 +387,7 @@ const students = [
             x: "https://x.com/johndoe"
         },
         contact: {
-            email: "johndoe@example.com",
+            area: "johndoe@example.com",
             phone: "+91 9876543210"
         },
         futureVision: "Leading a tech startup revolutionizing renewable energy solutions."
@@ -398,7 +396,7 @@ const students = [
     {
         id: 14,
         name: "Yuvraj Sharma",
-        profileImage: "dev gupta.png",
+        profileImage: "Male.png",
         birthDate: new Date(2009, 2, 15),
         bio: "Aspiring engineer with a passion for physics and coding.",
         rollNumber: 43,
@@ -420,7 +418,7 @@ const students = [
             x: "https://x.com/johndoe"
         },
         contact: {
-            email: "johndoe@example.com",
+            area: "johndoe@example.com",
             phone: "+91 9876543210"
         },
         futureVision: "Leading a tech startup revolutionizing renewable energy solutions."
@@ -429,38 +427,38 @@ const students = [
     {
         id: 15,
         name: "Ankita Pal",
-        profileImage: "dev gupta1.png",
+        profileImage: "images/ankita.png",
         birthDate: new Date(2009, 2, 15),
-        bio: "Aspiring engineer with a passion for physics and coding.",
+        bio: "Topper girl",
         rollNumber: 5,
         gender: "Female",
-        funname: "Red Phoenix",
-        friends: ["Jane Smith", "Mike Johnson", "Emma Watson"],
+        funname: "Kaala Jadu💀",
+        friends: ["Maulik Agarwal",],
         skills: {
             Looks : 7,
-            knowledge: 9,
-            humor: 7,
+            knowledge: 9.5,
+            humor: 8,
             Creativity: 8,
-            Sports: 9,
+            Sports: 8,
         },
-        hobbies: ["Coding", "Football", "Reading Sci-Fi"],
+        hobbies: ["🎨Painting", "📝Writing", "📚Reading"],
         favoriteSubjects: ["Mathematics", "Physics", "Computer Science"],
         socialLinks: {
-            instagram: "https://instagram.com/johndoe",
+            instagram: "https://instagram.com/an_nikiiiitaa_a",
             snapchat: "https://snapchat.com/johndoe",
             x: "https://x.com/johndoe"
         },
         contact: {
-            email: "johndoe@example.com",
+            area: "Banipark",
             phone: "+91 9876543210"
         },
-        futureVision: "Leading a tech startup revolutionizing renewable energy solutions."
+        futureVision: "A successful doctor"
     },
 
     {
         id: 16,
         name: "Mohamad Irshad",
-        profileImage: "dev gupta.png",
+        profileImage: "Male.png",
         birthDate: new Date(2009, 2, 15),
         bio: "Aspiring engineer with a passion for physics and coding.",
         rollNumber: 27,
@@ -482,7 +480,7 @@ const students = [
             x: "https://x.com/johndoe"
         },
         contact: {
-            email: "johndoe@example.com",
+            area: "johndoe@example.com",
             phone: "+91 9876543210"
         },
         futureVision: "Leading a tech startup revolutionizing renewable energy solutions."
@@ -490,7 +488,7 @@ const students = [
     {
         id: 17,
         name: "Mohamad Fahad",
-        profileImage: "dev gupta.png",
+        profileImage: "Male.png",
         birthDate: new Date(2009, 2, 15),
         bio: "Aspiring engineer with a passion for physics and coding.",
         rollNumber: 26,
@@ -512,7 +510,7 @@ const students = [
             x: "https://x.com/johndoe"
         },
         contact: {
-            email: "johndoe@example.com",
+            area: "johndoe@example.com",
             phone: "+91 9876543210"
         },
         futureVision: "Leading a tech startup revolutionizing renewable energy solutions."
@@ -520,7 +518,7 @@ const students = [
     {
         id: 18,
         name: "Mohamad Ayaan",
-        profileImage: "dev gupta.png",
+        profileImage: "Male.png",
         birthDate: new Date(2009, 2, 15),
         bio: "Aspiring engineer with a passion for physics and coding.",
         rollNumber: 25,
@@ -542,7 +540,7 @@ const students = [
             x: "https://x.com/johndoe"
         },
         contact: {
-            email: "johndoe@example.com",
+            area: "johndoe@example.com",
             phone: "+91 9876543210"
         },
         futureVision: "Leading a tech startup revolutionizing renewable energy solutions."
@@ -550,7 +548,7 @@ const students = [
     {
         id: 19,
         name: "Omkar Jit Singh",
-        profileImage: "dev gupta.png",
+        profileImage: "Male.png",
         birthDate: new Date(2009, 2, 15),
         bio: "Aspiring engineer with a passion for physics and coding.",
         rollNumber: 30,
@@ -572,7 +570,7 @@ const students = [
             x: "https://x.com/johndoe"
         },
         contact: {
-            email: "johndoe@example.com",
+            area: "johndoe@example.com",
             phone: "+91 9876543210"
         },
         futureVision: "Leading a tech startup revolutionizing renewable energy solutions."
@@ -580,7 +578,7 @@ const students = [
     {
         id: 20,
         name: "Rudra Pratap Singh",
-        profileImage: "dev gupta.png",
+        profileImage: "Male.png",
         birthDate: new Date(2009, 2, 15),
         bio: "Aspiring engineer with a passion for physics and coding.",
         rollNumber: 34,
@@ -602,7 +600,7 @@ const students = [
             x: "https://x.com/johndoe"
         },
         contact: {
-            email: "johndoe@example.com",
+            area: "johndoe@example.com",
             phone: "+91 9876543210"
         },
         futureVision: "Leading a tech startup revolutionizing renewable energy solutions."
@@ -610,7 +608,7 @@ const students = [
     {
         id: 21,
         name: "Aryan Raj",
-        profileImage: "dev gupta.png",
+        profileImage: "Male.png",
         birthDate: new Date(2009, 2, 15),
         bio: "Aspiring engineer with a passion for physics and coding.",
         rollNumber: 7,
@@ -632,7 +630,7 @@ const students = [
             x: "https://x.com/johndoe"
         },
         contact: {
-            email: "johndoe@example.com",
+            area: "johndoe@example.com",
             phone: "+91 9876543210"
         },
         futureVision: "Leading a tech startup revolutionizing renewable energy solutions."
@@ -640,7 +638,7 @@ const students = [
     {
         id: 22,
         name: "Maulik Trivedi",
-        profileImage: "dev gupta.png",
+        profileImage: "Male.png",
         birthDate: new Date(2009, 2, 15),
         bio: "Aspiring engineer with a passion for physics and coding.",
         rollNumber: 23,
@@ -662,7 +660,7 @@ const students = [
             x: "https://x.com/johndoe"
         },
         contact: {
-            email: "johndoe@example.com",
+            area: "johndoe@example.com",
             phone: "+91 9876543210"
         },
         futureVision: "Leading a tech startup revolutionizing renewable energy solutions."
@@ -670,7 +668,7 @@ const students = [
     {
         id: 23,
         name: "Tanish Jaiswal",
-        profileImage: "dev gupta.png",
+        profileImage: "Male.png",
         birthDate: new Date(2009, 2, 15),
         bio: "Aspiring engineer with a passion for physics and coding.",
         rollNumber: 39,
@@ -692,7 +690,7 @@ const students = [
             x: "https://x.com/johndoe"
         },
         contact: {
-            email: "johndoe@example.com",
+            area: "johndoe@example.com",
             phone: "+91 9876543210"
         },
         futureVision: "Leading a tech startup revolutionizing renewable energy solutions."
@@ -700,7 +698,7 @@ const students = [
     {
         id: 24,
         name: "Suhan Sharma",
-        profileImage: "dev gupta.png",
+        profileImage: "Male.png",
         birthDate: new Date(2009, 2, 15),
         bio: "Aspiring engineer with a passion for physics and coding.",
         rollNumber: 40,
@@ -722,7 +720,7 @@ const students = [
             x: "https://x.com/johndoe"
         },
         contact: {
-            email: "johndoe@example.com",
+            area: "johndoe@example.com",
             phone: "+91 9876543210"
         },
         futureVision: "Leading a tech startup revolutionizing renewable energy solutions."
@@ -730,7 +728,7 @@ const students = [
     {
         id: 25,
         name: "Aditya Sharma",
-        profileImage: "dev gupta.png",
+        profileImage: "Male.png",
         birthDate: new Date(2009, 2, 15),
         bio: "Aspiring engineer with a passion for physics and coding.",
         rollNumber: 2,
@@ -752,7 +750,7 @@ const students = [
             x: "https://x.com/johndoe"
         },
         contact: {
-            email: "johndoe@example.com",
+            area: "johndoe@example.com",
             phone: "+91 9876543210"
         },
         futureVision: "Leading a tech startup revolutionizing renewable energy solutions."
@@ -760,7 +758,7 @@ const students = [
     {
         id:26,
         name: "Bhavleen Khatri",
-        profileImage: "dev gupta1.png",
+        profileImage: "Female.png",
         birthDate: new Date(2009, 2, 15),
         bio: "Aspiring engineer with a passion for physics and coding.",
         rollNumber: 9,
@@ -782,7 +780,7 @@ const students = [
             x: "https://x.com/johndoe"
         },
         contact: {
-            email: "johndoe@example.com",
+            area: "johndoe@example.com",
             phone: "+91 9876543210"
         },
         futureVision: "Leading a tech startup revolutionizing renewable energy solutions."
@@ -790,7 +788,7 @@ const students = [
     {
         id: 27,
         name: "Keshav Gunidiya",
-        profileImage: "dev gupta.png",
+        profileImage: "Male.png",
         birthDate: new Date(2009, 2, 15),
         bio: "Aspiring engineer with a passion for physics and coding.",
         rollNumber: 19,
@@ -812,7 +810,7 @@ const students = [
             x: "https://x.com/johndoe"
         },
         contact: {
-            email: "johndoe@example.com",
+            area: "johndoe@example.com",
             phone: "+91 9876543210"
         },
         futureVision: "Leading a tech startup revolutionizing renewable energy solutions."
@@ -820,7 +818,7 @@ const students = [
     {
         id: 28,
         name: "Amaad Kazmi",
-        profileImage: "dev gupta.png",
+        profileImage: "Male.png",
         birthDate: new Date(2009, 2, 15),
         bio: "Aspiring engineer with a passion for physics and coding.",
         rollNumber: 4,
@@ -842,7 +840,7 @@ const students = [
             x: "https://x.com/johndoe"
         },
         contact: {
-            email: "johndoe@example.com",
+            area: "johndoe@example.com",
             phone: "+91 9876543210"
         },
         futureVision: "Leading a tech startup revolutionizing renewable energy solutions."
@@ -850,7 +848,7 @@ const students = [
     {
         id: 30,
         name: "Vatsal Anthwal",
-        profileImage: "dev gupta.png",
+        profileImage: "Male.png",
         birthDate: new Date(2009, 2, 15),
         bio: "Aspiring engineer with a passion for physics and coding.",
         rollNumber: 41,
@@ -872,7 +870,7 @@ const students = [
             x: "https://x.com/johndoe"
         },
         contact: {
-            email: "johndoe@example.com",
+            area: "johndoe@example.com",
             phone: "+91 9876543210"
         },
         futureVision: "Leading a tech startup revolutionizing renewable energy solutions."
@@ -880,7 +878,7 @@ const students = [
     {
         id: 31,
         name: "Karthik Soni",
-        profileImage: "dev gupta.png",
+        profileImage: "Male.png",
         birthDate: new Date(2009, 2, 15),
         bio: "Aspiring engineer with a passion for physics and coding.",
         rollNumber: 18,
@@ -902,7 +900,7 @@ const students = [
             x: "https://x.com/johndoe"
         },
         contact: {
-            email: "johndoe@example.com",
+            area: "johndoe@example.com",
             phone: "+91 9876543210"
         },
         futureVision: "Leading a tech startup revolutionizing renewable energy solutions."
@@ -911,7 +909,7 @@ const students = [
     {
         id: 32,
         name: "Rajan Sharma",
-        profileImage: "dev gupta.png",
+        profileImage: "Male.png",
         birthDate: new Date(2009, 2, 15),
         bio: "Aspiring engineer with a passion for physics and coding.",
         rollNumber: 32,
@@ -933,7 +931,7 @@ const students = [
             x: "https://x.com/johndoe"
         },
         contact: {
-            email: "johndoe@example.com",
+            area: "johndoe@example.com",
             phone: "+91 9876543210"
         },
         futureVision: "Leading a tech startup revolutionizing renewable energy solutions."
@@ -941,7 +939,7 @@ const students = [
     {
         id: 33,
         name: "Robin Sood",
-        profileImage: "dev gupta.png",
+        profileImage: "Male.png",
         birthDate: new Date(2009, 2, 15),
         bio: "Aspiring engineer with a passion for physics and coding.",
         rollNumber: 33,
@@ -963,7 +961,7 @@ const students = [
             x: "https://x.com/johndoe"
         },
         contact: {
-            email: "johndoe@example.com",
+            area: "johndoe@example.com",
             phone: "+91 9876543210"
         },
         futureVision: "Leading a tech startup revolutionizing renewable energy solutions."
@@ -971,7 +969,7 @@ const students = [
     {
         id: 34,
         name: "Evangeline Sharon",
-        profileImage: "dev gupta1.png",
+        profileImage: "Female.png",
         birthDate: new Date(2009, 2, 15),
         bio: "Aspiring engineer with a passion for physics and coding.",
         rollNumber: 12,
@@ -993,7 +991,7 @@ const students = [
             x: "https://x.com/johndoe"
         },
         contact: {
-            email: "johndoe@example.com",
+            area: "johndoe@example.com",
             phone: "+91 9876543210"
         },
         futureVision: "Leading a tech startup revolutionizing renewable energy solutions."
@@ -1001,7 +999,7 @@ const students = [
     {
         id: 35,
         name: "Harsh kumar ",
-        profileImage: "dev gupta.png",
+        profileImage: "Male.png",
         birthDate: new Date(2009, 2, 15),
         bio: "Aspiring engineer with a passion for physics and coding.",
         rollNumber: 13,
@@ -1023,7 +1021,7 @@ const students = [
             x: "https://x.com/johndoe"
         },
         contact: {
-            email: "johndoe@example.com",
+            area: "johndoe@example.com",
             phone: "+91 9876543210"
         },
         futureVision: "Leading a tech startup revolutionizing renewable energy solutions."
@@ -1031,7 +1029,7 @@ const students = [
     {
         id: 36,
         name: "Soham Sharma",
-        profileImage: "dev gupta.png",
+        profileImage: "Male.png",
         birthDate: new Date(2009, 2, 15),
         bio: "Aspiring engineer with a passion for physics and coding.",
         rollNumber: 37,
@@ -1053,7 +1051,7 @@ const students = [
             x: "https://x.com/johndoe"
         },
         contact: {
-            email: "johndoe@example.com",
+            area: "johndoe@example.com",
             phone: "+91 9876543210"
         },
         futureVision: "Leading a tech startup revolutionizing renewable energy solutions."
@@ -1061,7 +1059,7 @@ const students = [
     {
         id: 37,
         name: "Arnav Pareek",
-        profileImage: "dev gupta.png",
+        profileImage: "Male.png",
         birthDate: new Date(2009, 2, 15),
         bio: "Aspiring engineer with a passion for physics and coding.",
         rollNumber: 6,
@@ -1083,7 +1081,7 @@ const students = [
             x: "https://x.com/johndoe"
         },
         contact: {
-            email: "johndoe@example.com",
+            area: "johndoe@example.com",
             phone: "+91 9876543210"
         },
         futureVision: "Leading a tech startup revolutionizing renewable energy solutions."
@@ -1091,7 +1089,7 @@ const students = [
     {
         id: 38,
         name: "Izna Akhtar Hashmi",
-        profileImage: "dev gupta1.png",
+        profileImage: "Female.png",
         birthDate: new Date(2009, 2, 15),
         bio: "Aspiring engineer with a passion for physics and coding.",
         rollNumber: 17,
@@ -1113,7 +1111,7 @@ const students = [
             x: "https://x.com/johndoe"
         },
         contact: {
-            email: "johndoe@example.com",
+            area: "johndoe@example.com",
             phone: "+91 9876543210"
         },
         futureVision: "Leading a tech startup revolutionizing renewable energy solutions."
@@ -1121,7 +1119,7 @@ const students = [
     {
         id: 39,
         name: "Riddhi Maheshwari",
-        profileImage: "dev gupta1.png",
+        profileImage: "Female.png",
         birthDate: new Date(2009, 2, 15),
         bio: "Aspiring engineer with a passion for physics and coding.",
         rollNumber: 14,
@@ -1143,7 +1141,7 @@ const students = [
             x: "https://x.com/johndoe"
         },
         contact: {
-            email: "johndoe@example.com",
+            area: "johndoe@example.com",
             phone: "+91 9876543210"
         },
         futureVision: "Leading a tech startup revolutionizing renewable energy solutions."
@@ -1151,7 +1149,7 @@ const students = [
     {
         id: 40,
         name: "Isha Sharma",
-        profileImage: "dev gupta1.png",
+        profileImage: "Female.png",
         birthDate: new Date(2009, 2, 15),
         bio: "Aspiring engineer with a passion for physics and coding.",
         rollNumber: 15,
@@ -1173,7 +1171,7 @@ const students = [
             x: "https://x.com/johndoe"
         },
         contact: {
-            email: "johndoe@example.com",
+            area: "johndoe@example.com",
             phone: "+91 9876543210"
         },
         futureVision: "Leading a tech startup revolutionizing renewable energy solutions."
@@ -1181,7 +1179,7 @@ const students = [
     {
         id: 41,
         name: "Bhavishka khandelwal",
-        profileImage: "dev gupta1.png",
+        profileImage: "Female.png",
         birthDate: new Date(2009, 2, 15),
         bio: "Aspiring engineer with a passion for physics and coding.",
         rollNumber: 10,
@@ -1203,7 +1201,7 @@ const students = [
             x: "https://x.com/johndoe"
         },
         contact: {
-            email: "johndoe@example.com",
+            area: "johndoe@example.com",
             phone: "+91 9876543210"
         },
         futureVision: "Leading a tech startup revolutionizing renewable energy solutions."
@@ -1211,7 +1209,7 @@ const students = [
     {
         id: 42,
         name: "Laksna Reddy",
-        profileImage: "dev gupta1.png",
+        profileImage: "Female.png",
         birthDate: new Date(2009, 2, 15),
         bio: "Aspiring engineer with a passion for physics and coding.",
         rollNumber: 21,
@@ -1233,7 +1231,7 @@ const students = [
             x: "https://x.com/johndoe"
         },
         contact: {
-            email: "johndoe@example.com",
+            area: "johndoe@example.com",
             phone: "+91 9876543210"
         },
         futureVision: "Leading a tech startup revolutionizing renewable energy solutions."
@@ -1241,7 +1239,7 @@ const students = [
     {
         id: 43,
         name: "Kanishka Saini",
-        profileImage: "dev gupta1.png",
+        profileImage: "Female.png",
         birthDate: new Date(2009, 2, 15),
         bio: "Aspiring engineer with a passion for physics and coding.",
         rollNumber: 17,
@@ -1263,7 +1261,7 @@ const students = [
             x: "https://x.com/johndoe"
         },
         contact: {
-            email: "johndoe@example.com",
+            area: "johndoe@example.com",
             phone: "+91 9876543210"
         },
         futureVision: "Leading a tech startup revolutionizing renewable energy solutions."
