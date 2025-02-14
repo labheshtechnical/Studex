@@ -99,7 +99,7 @@ const students = [
         bio: "Wanna Be Designer",
         rollNumber: 11,
         gender: "Male",
-        funname: "Slave👨🏿",
+        funname: "Kaala Korean👨🏿",
         friends: ["Labhesh Tiwari","Maulik Agarwal","Tanish Jaiswal","Bhavleen Khatri","Priyansh Dusad","Lakshna"],
         skills: {
             Looks : 8.5,
@@ -117,7 +117,7 @@ const students = [
             x: "https://x.com/johndoe"
         },
         contact: {
-            area: "johndoe@example.com",
+            area: "Goner",
             phone: "+91 9653855184"
         },
         futureVision: "Dominating the fashion industry."
@@ -191,7 +191,7 @@ const students = [
         rollNumber: 3,
         gender: "Male",
         funname: "Kaalu",
-        friends: ["Labhesh Tiwari", "Ayush Kulhari", "Mrityunjay Kumawat","Saksham Sharma",""],
+        friends: ["Labhesh Tiwari", "Ayush Kulhari", "Mrityunjay Kumawat","Saksham Sharma","Priyansh Dusad","Vedant Dadhich","Omkar jit singh"],
         skills: {
             Looks : 8,
             knowledge: 9,
