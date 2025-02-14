@@ -31,6 +31,7 @@
             --skill-bar-fill: #2dd4bf; /* Teal for skill bar fill */
             --border-color: #2dd4bf44; /* Semi-transparent teal */
             --icon-color: #2dd4bf; /* Icon color */
+            --student-color: #2dd4bf; /* Default student color */
         }
 
         body.dark-theme {
@@ -168,6 +169,39 @@
         .back-button:hover {
             background: var(--skill-bar-fill);
             transform: translateY(-2px);
+        }
+
+        .navigation-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .nav-button {
+            background: var(--student-color);
+            border: none;
+            color: var(--text-color);
+            padding: 10px 20px;
+            border-radius: 30px;
+            cursor: pointer;
+            font-size: 1em;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .nav-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px var(--student-color);
+        }
+
+        .prev-button {
+            margin-right: auto;
+        }
+
+        .next-button {
+            margin-left: auto;
         }
 
         .detail-card {
@@ -312,13 +346,23 @@
 
         <div class="detail-container" id="detailContainer">
             <button class="back-button" onclick="showMainPage()"><i class="fas fa-arrow-left"></i> Back</button>
+            <!-- Navigation Buttons -->
+            <div class="navigation-buttons">
+                <button class="nav-button prev-button" onclick="showPreviousStudent()">
+                    <i class="fas fa-chevron-left"></i> Previous
+                </button>
+                <button class="nav-button next-button" onclick="showNextStudent()">
+                    Next <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
             <div class="detail-card" id="studentDetail"></div>
         </div>
     </div>
     <script src="info.js"></script>
 
     <script>
- 
+        let currentStudentId = null;
+
         // Generate unique color based on name
         function getStudentColor(name) {
             const hash = name.split('').reduce((acc, char) => char.charCodeAt(0) + acc, 0);
@@ -346,13 +390,18 @@
         }
 
         function showDetail(studentId) {
+            currentStudentId = studentId;
             const student = students.find(s => s.id === studentId);
             if (!student) return;
 
             const studentColor = getStudentColor(student.name);
             const detailContainer = document.getElementById('detailContainer');
             const cardsContainer = document.getElementById('cardsContainer');
-            
+
+            // Set the student color for the buttons
+            document.documentElement.style.setProperty('--student-color', studentColor);
+
+            // Render the detail page
             document.getElementById('studentDetail').innerHTML = `
                 <img src="${student.profileImage}" class="detail-image" alt="${student.name}">
                 <div class="detail-info">
@@ -421,7 +470,7 @@
 
                     <div class="stats-section">
                         <h3>Contact</h3>
-                        <p>📧 ${student.contact.email}</p>
+                        <p>📍 ${student.contact.area}</p>
                         <p>📱 ${student.contact.phone}</p>
                         <div class="social-links">
                             ${Object.entries(student.socialLinks).map(([platform, url]) => `
@@ -441,6 +490,18 @@
         function showMainPage() {
             document.getElementById('cardsContainer').style.display = 'grid';
             document.getElementById('detailContainer').style.display = 'none';
+        }
+
+        function showNextStudent() {
+            const currentIndex = students.findIndex(s => s.id === currentStudentId);
+            const nextIndex = (currentIndex + 1) % students.length;
+            showDetail(students[nextIndex].id);
+        }
+
+        function showPreviousStudent() {
+            const currentIndex = students.findIndex(s => s.id === currentStudentId);
+            const prevIndex = (currentIndex - 1 + students.length) % students.length;
+            showDetail(students[prevIndex].id);
         }
 
         function toggleTheme() {
