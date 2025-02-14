@@ -3,7 +3,7 @@ const students = [
     {
         id: 1,
         name: "Labhesh Tiwari          ",
-        profileImage: "images/labhesh.jpg",
+        profileImage: "images/labhesh.png",
         birthDate: new Date(2010, 3, 19),
         bio: "Student | Coder | Sports enthusiast | Learning, laughing, leveling up! 🚀.",
         rollNumber: 20,
