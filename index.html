@@ -6,6 +6,63 @@
     <title>StudentDex</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
+        @media (max-width: 480px) {
+    .cards-grid {
+        grid-template-columns: 1fr; /* Single column on mobile */
+        gap: 15px; /* Reduced gap for mobile */
+        margin-top: 25px;
+    }
+
+    .student-card {
+        padding: 15px; /* Reduced padding */
+        margin: 0 10px; /* Add horizontal margin */
+    }
+
+    .student-image {
+        height: 150px; /* Reduced image height */
+        margin-bottom: 10px;
+    }
+
+    .student-name {
+        font-size: 1em; /* Smaller font size */
+    }
+
+    /* Adjust hover effects for mobile */
+    .student-card:hover {
+        transform: none;
+        box-shadow: none;
+    }
+
+    /* Make sure cards don't overflow */
+    .container {
+        padding: 10px;
+    }
+
+    /* Adjust header elements */
+    .logo {
+        font-size: 2em;
+        margin-bottom: 15px;
+    }
+
+    .theme-toggle {
+        top: 20px;
+        right: 10px;
+        padding: 8px 12px;
+        font-size: 1em;
+    }
+
+    #searchInput {
+        padding: 12px 20px;
+        font-size: 1em;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+    .cards-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 20px;
+    }
+}
         /* Global Styles */
         * {
             margin: 0;
@@ -178,9 +235,9 @@
         }
 
         .nav-button {
-            background: var(--student-color);
+            background: #1e1e1e;
             border: none;
-            color: var(--text-color);
+            color: white;
             padding: 10px 20px;
             border-radius: 30px;
             cursor: pointer;
@@ -197,7 +254,7 @@
         }
 
         .prev-button {
-            margin-right: auto;
+           margin-right: auto;
         }
 
         .next-button {
