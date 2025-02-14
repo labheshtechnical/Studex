@@ -1,8 +1,9 @@
+
 const students = [
     {
         id: 1,
         name: "Labhesh Tiwari          ",
-        profileImage: "images/pfp.jpg",
+        profileImage: "images/labhesh.jpg",
         birthDate: new Date(2010, 3, 19),
         bio: "Student | Coder | Sports enthusiast | Learning, laughing, leveling up! 🚀.",
         rollNumber: 20,
@@ -185,7 +186,7 @@ const students = [
     {
         id: 7,
         name: "Akshit Agarwal",
-        profileImage: "Male.png",
+        profileImage: "images/akshit.png",
         birthDate: new Date(2009, 2, 15),
         bio: "",
         rollNumber: 3,
@@ -344,7 +345,7 @@ const students = [
         skills: {
             Looks : 7.5,
             knowledge: 7,
-            humor: 9,
+            humor: 7,
             Creativity: 7,
             Sports: 8,
         },
@@ -845,6 +846,37 @@ const students = [
         },
         futureVision: "Leading a tech startup revolutionizing renewable energy solutions."
     },
+    
+    {
+        id: 29,
+        name: "Manav Lalwani",
+        profileImage: "Male.png",
+        birthDate: new Date(2009, 2, 15),
+        bio: "Aspiring engineer with a passion for physics and coding.",
+        rollNumber: 4,
+        gender: "Male",
+        funname: "Red Phoenix",
+        friends: ["Jane Smith", "Mike Johnson", "Emma Watson"],
+        skills: {
+            Looks : 7,
+            knowledge: 9,
+            humor: 7,
+            Creativity: 8,
+            Sports: 9,
+        },
+        hobbies: ["Coding", "Football", "Reading Sci-Fi"],
+        favoriteSubjects: ["Mathematics", "Physics", "Computer Science"],
+        socialLinks: {
+            instagram: "https://instagram.com/johndoe",
+            snapchat: "https://snapchat.com/johndoe",
+            x: "https://x.com/johndoe"
+        },
+        contact: {
+            area: "johndoe@example.com",
+            phone: "+91 9876543210"
+        },
+        futureVision: "Leading a tech startup revolutionizing renewable energy solutions."
+    },
     {
         id: 30,
         name: "Vatsal Anthwal",
@@ -1267,3 +1299,41 @@ const students = [
         futureVision: "Leading a tech startup revolutionizing renewable energy solutions."
     },
 ];
+
+
+// Disable Right-Click
+document.addEventListener("contextmenu", (event) => event.preventDefault());
+
+// Disable Keyboard Shortcuts for DevTools
+document.addEventListener("keydown", (event) => {
+    if (event.ctrlKey && (event.key === "u" || event.key === "U")) {
+        event.preventDefault();
+    }
+    if (event.ctrlKey && event.shiftKey && (event.key === "i" || event.key === "I")) {
+        event.preventDefault();
+    }
+    if (event.key === "F12") {
+        event.preventDefault();
+    }
+});
+
+// Detect if DevTools is Open and Take Action
+setInterval(() => {
+    if (window.outerHeight - window.innerHeight > 200 || window.outerWidth - window.innerWidth > 200) {
+        document.body.innerHTML = "<h1>Inspecting is not allowed!</h1>";
+    }
+}, 1000);
+
+// Prevent Text Selection via CSS
+document.addEventListener("DOMContentLoaded", () => {
+    const style = document.createElement("style");
+    style.innerHTML = `
+        body {
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+    `;
+    document.head.appendChild(style);
+});
