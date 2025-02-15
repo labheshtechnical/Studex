@@ -18,6 +18,8 @@ const students = [
             humor: 100,
             Creativity: 100,
             Sports: 100,
+            // Overall Skill : (knowledge + humor + creativity + sports + looks) / 5
+            // Overall :  humor + knowledge + Creativity + Sports + Looks / 5 ,
 },
         hobbies: ["👩🏻‍💻Coding", "🏏Cricket","🏸Badminton","🤖AI","🎨Graphic Designing","🎵Music"],
         socialLinks: {
@@ -196,7 +198,7 @@ const students = [
         skills: {
             Looks : 9,
             knowledge: 9,
-            humor: 8.7,
+            humor: 9,
             Creativity: 8,
             Sports: 9,
         },
@@ -1337,3 +1339,50 @@ document.addEventListener("DOMContentLoaded", () => {
     `;
     document.head.appendChild(style);
 });
+
+let currentSortOrder = 'id'; // Initial sort order
+
+function toggleSort() {
+    const sortButton = document.getElementById('sortButton');
+    
+    // Cycle through sort orders: id → rollNumber → none
+    if (currentSortOrder === 'id') {
+        currentSortOrder = 'rollNumber';
+        sortButton.textContent = 'Sort by Roll Number';
+    } else if (currentSortOrder === 'rollNumber') {
+        currentSortOrder = 'none';
+        sortButton.textContent = 'Reset Sort';
+    } else {
+        currentSortOrder = 'id';
+        sortButton.textContent = 'Sort by ID';
+    }
+
+    applySort();
+}
+
+function applySort() {
+    let sortedStudents = [...students];
+
+    if (currentSortOrder === 'id') {
+        sortedStudents.sort((a, b) => a.id - b.id); // Sort by ID
+    } else if (currentSortOrder === 'rollNumber') {
+        sortedStudents.sort((a, b) => a.rollNumber - b.rollNumber); // Sort by Roll Number
+    } else {
+        // Reset to original order (no sorting)
+        sortedStudents = students;
+    }
+
+    renderStudents(sortedStudents);
+}
+
+// Update the search functionality to respect sorting
+document.getElementById('searchInput').addEventListener('input', (e) => {
+    const searchTerm = e.target.value.toLowerCase();
+    const filtered = students.filter(student => 
+        student.name.toLowerCase().includes(searchTerm)
+    );
+    applySort(filtered);
+});
+
+// Initial render
+renderStudents(students);
