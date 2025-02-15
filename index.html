@@ -385,6 +385,27 @@
                 height: 300px;
             }
         }
+        .controls {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.sort-button {
+    background: var(--primary-color);
+    border: none;
+    padding: 10px 25px;
+    border-radius: 25px;
+    color: var(--text-color);
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.sort-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px var(--primary-color);
+}   
     </style>
 </head>
 <body class="light-theme">
@@ -396,6 +417,9 @@
             </button>
             <div class="search-bar">
                 <input type="text" id="searchInput" placeholder="Search students...">
+            </div>
+            <div class="controls">
+                <button class="sort-button" onclick="toggleSort()" id="sortButton">Sort by ID</button>
             </div>
         </header>
 
@@ -446,105 +470,136 @@
             `).join('');
         }
 
-        function showDetail(studentId) {
-            currentStudentId = studentId;
-            const student = students.find(s => s.id === studentId);
-            if (!student) return;
+        function calculateOverallSkill(skills) {
+    const specificSkills = ['knowledge', 'humor', 'creativity', 'sports', 'looks'];
+    let total = 0;
+    let count = 0;
 
-            const studentColor = getStudentColor(student.name);
-            const detailContainer = document.getElementById('detailContainer');
-            const cardsContainer = document.getElementById('cardsContainer');
+    // Sum only the specified skills
+    specificSkills.forEach(skill => {
+        if (skills[skill] !== undefined) { // Check if the skill exists
+            total += skills[skill];
+            count++;
+        }
+    });
 
-            // Set the student color for the buttons
-            document.documentElement.style.setProperty('--student-color', studentColor);
+    // Calculate the average and round to the nearest whole number
+    const mean = total / count;
+    return Math.round(mean); // Round to the nearest whole number
+}
+function showDetail(studentId) {
+    currentStudentId = studentId;
+    const student = students.find(s => s.id === studentId);
+    if (!student) return;
 
-            // Render the detail page
-            document.getElementById('studentDetail').innerHTML = `
-                <img src="${student.profileImage}" class="detail-image" alt="${student.name}">
-                <div class="detail-info">
-                    <h1 style="color: ${studentColor}">${student.name}</h1>
-                    <div class="stats-section">
-                        <h3>Bio</h3>
-                        <p>${student.bio}</p>
+    const studentColor = getStudentColor(student.name);
+    const detailContainer = document.getElementById('detailContainer');
+    const cardsContainer = document.getElementById('cardsContainer');
+
+    // Set the student color for the buttons
+    document.documentElement.style.setProperty('--student-color', studentColor);
+
+    // Calculate overall skill
+    const overallSkill = calculateOverallSkill(student.skills);
+
+    // Render the detail page
+    document.getElementById('studentDetail').innerHTML = `
+        <img src="${student.profileImage}" class="detail-image" alt="${student.name}">
+        <div class="detail-info">
+            <h1 style="color: ${studentColor}">${student.name}</h1>
+            <div class="stats-section">
+                <h3>Bio</h3>
+                <p>${student.bio}</p>
+            </div>
+            
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <h4>Roll Number</h4>
+                    <p>${student.rollNumber}</p>
+                </div>
+                <div class="stat-item">
+                    <h4>Age</h4>
+                    <p>${calculateAge(student.birthDate)}</p>
+                </div>
+                <div class="stat-item">
+                    <h4>Gender</h4>
+                    <p>${student.gender}</p>
+                </div>
+                <div class="stat-item">
+                    <h4>Fun name</h4>
+                    <p>${student.funname}</p>
+                </div>
+            </div>
+
+            <div class="stats-section">
+                <h3>Skills</h3>
+                <!-- Overall Skill -->
+                <div class="skill-bar-container">
+                    <div class="skill-label">
+                        <span>Overall</span>
+                        <span>${overallSkill}/10</span>
                     </div>
-                    
-                    <div class="stats-grid">
-                        <div class="stat-item">
-                            <h4>Roll Number</h4>
-                            <p>${student.rollNumber}</p>
-                        </div>
-                        <div class="stat-item">
-                            <h4>Age</h4>
-                            <p>${calculateAge(student.birthDate)}</p>
-                        </div>
-                        <div class="stat-item">
-                            <h4>Gender</h4>
-                            <p>${student.gender}</p>
-                        </div>
-                        <div class="stat-item">
-                            <h4>Fun name</h4>
-                            <p>${student.funname}</p>
-                        </div>
-                    </div>
-
-                    <div class="stats-section">
-                        <h3>Skills</h3>
-                        ${Object.entries(student.skills).map(([skill, value]) => `
-                            <div class="skill-bar-container">
-                                <div class="skill-label">
-                                    <span>${skill}</span>
-                                    <span>${value}/10</span>
-                                </div>
-                                <div class="skill-bar">
-                                    <div class="skill-progress" style="width: ${value * 10}%; background: ${studentColor}"></div>
-                                </div>
-                            </div>
-                        `).join('')}
-                    </div>
-
-                    <div class="friends-section">
-                        <h3>Friends</h3>
-                        <div class="friends-grid">
-                            ${student.friends.map(friend => `
-                                <div class="friend-chip">${friend}</div>
-                            `).join('')}
-                        </div>
-                    </div>
-
-                    <div class="hobbies-section">
-                        <h3>Hobbies</h3>
-                        <div class="hobbies-grid">
-                            ${student.hobbies.map(hobby => `
-                                <div class="hobby-chip">${hobby}</div>
-                            `).join('')}
-                        </div>
-                    </div>
-
-                    <div class="future-vision">
-                        <h3>Where do we see ${student.name} in 10 years?</h3>
-                        <p>${student.futureVision}</p>
-                    </div>
-
-                    <div class="stats-section">
-                        <h3>Contact</h3>
-                        <p>📍 ${student.contact.area}</p>
-                        <p>📱 ${student.contact.phone}</p>
-                        <div class="social-links">
-                            ${Object.entries(student.socialLinks).map(([platform, url]) => `
-                                <a href="${url}" target="_blank">
-                                    <i class="fab ${platform === 'x' ? 'fa-x-twitter' : 'fa-' + platform}"></i>
-                                </a>
-                            `).join('')}
-                        </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: ${overallSkill * 10}%; background: ${studentColor}"></div>
                     </div>
                 </div>
-            `;
+                <!-- Other Skills -->
+                ${Object.entries(student.skills).map(([skill, value]) => `
+                    <div class="skill-bar-container">
+                        <div class="skill-label">
+                            <span>${skill}</span>
+                            <span>${value}/10</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: ${value * 10}%; background: ${studentColor}"></div>
+                        </div>
+                    </div>
+                `).join('')}
+            </div>
 
-            cardsContainer.style.display = 'none';
-            detailContainer.style.display = 'block';
-        }
+            <div class="friends-section">
+                <h3>Friends</h3>
+                <div class="friends-grid">
+                    ${student.friends.map(friend => `
+                        <div class="friend-chip">${friend}</div>
+                    `).join('')}
+                </div>
+            </div>
 
-        function showMainPage() {
+            <div class="hobbies-section">
+                <h3>Hobbies</h3>
+                <div class="hobbies-grid">
+                    ${student.hobbies.map(hobby => `
+                        <div class="hobby-chip">${hobby}</div>
+                    `).join('')}
+                </div>
+            </div>
+
+            <div class="future-vision">
+                <h3>Where do we see ${student.name} in 10 years?</h3>
+                <p>${student.futureVision}</p>
+            </div>
+
+            <div class="stats-section">
+                <h3>Contact</h3>
+                <p>📍 ${student.contact.area}</p>
+                <p>📱 ${student.contact.phone}</p>
+                <div class="social-links">
+                    ${Object.entries(student.socialLinks).map(([platform, url]) => `
+                        <a href="${url}" target="_blank">
+                            <i class="fab ${platform === 'x' ? 'fa-x-twitter' : 'fa-' + platform}"></i>
+                        </a>
+                    `).join('')}
+                </div>
+            </div>
+        </div>
+    `;
+
+    cardsContainer.style.display = 'none';
+    detailContainer.style.display = 'block';
+}
+
+function showMainPage() {
             document.getElementById('cardsContainer').style.display = 'grid';
             document.getElementById('detailContainer').style.display = 'none';
         }
