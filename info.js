@@ -45,11 +45,11 @@ const students = [
         friends: ["Labhesh Tiwari", "Dev Gupta", "Maulik Agarwal", "Lavin Singh" , "Ronak Soni" ,
             "Akshit Agarwal" , "Saksham Sharma" , "Ayush Kulhari " , "Jatin Choudhary","Aarnav","Yuvraj Sharma"],
         skills: {
-            Looks : 10000000000,
-            knowledge: 9000000000,
-            humor: 100000000000,
-            Creativity: 80000000000,
-            Sports: 99999999999,
+            Looks : 8,
+            knowledge: 9.2,
+            humor: 9.9,
+            Creativity: 7.9,
+            Sports: 9.3,
         },
         hobbies: ["🎫Studying", "🏏Cricket", "🎶Musics and Podcast "],
         favoriteSubjects: ["Mathematics", "Physics", "Computer Science"],
@@ -75,11 +75,11 @@ const students = [
         funname: "Pure Rajasthani",
         friends: ["Labhesh Tiwari", "Dev Gupta", "Tanish Jaiswal","Ankita Pal💕" , "Bhavleen Khatri","Priyansh Dusad","Lavin Singh"],
         skills: {
-            Looks : 7.5,
-            knowledge: 8,
-            humor: 9,
-            Creativity: 9,
-            Sports: 8.5,
+            Looks : 7.9,
+            knowledge: 7.8,
+            humor: 8.3,
+            Creativity: 9.3,
+            Sports: 8.8,
         },
         hobbies: ["🎨Painting", "🏏Cricket", ""],
         favoriteSubjects: ["Mathematics", "Physics", "Computer Science"],
@@ -92,7 +92,7 @@ const students = [
             area: "Murlipura",
             phone: "+91 9876543210"
         },
-        futureVision: ""
+        futureVision: "Mechanical Engineering"
     },
     {
         id: 4,
@@ -105,17 +105,17 @@ const students = [
         funname: "Kaala Korean👨🏿",
         friends: ["Labhesh Tiwari","Maulik Agarwal","Tanish Jaiswal","Bhavleen Khatri","Priyansh Dusad","Lakshna"],
         skills: {
-            Looks : 8.5,
-            knowledge: 9,
-            humor: 9,
-            Creativity: 11,
+            Looks : 9,
+            knowledge: 8,
+            humor: 8,
+            Creativity: 10,
             Sports: 10,
 
         },
-        hobbies: ["🎨Painitng", "🏀Basketball", "🖌Designing"],
+        hobbies: ["🎨Painitng", "🏀Basketball", "🖌Designing" , "👧🏻Ladkibaazi"],
         favoriteSubjects: ["Mathematics", "Physics", "Computer Science"],
         socialLinks: {
-            instagram: "https://instagram.com/johndoe",
+            instagram: "https://instagram.com/devsp.idey",
             snapchat: "https://snapchat.com/johndoe",
             x: "https://x.com/johndoe"
         },
