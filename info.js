@@ -13,11 +13,11 @@ const students = [
              "Akshit Agarwal" , "Saksham Sharma" , "Ayush Kulhari " , "Jatin Choudhary","Aarnav","Yuvraj Sharma",
              "Amaad","Ayaan","Vedant Dadhich","Mrityunjay Kumawat"],
         skills: {
-            Looks : 1,
-            knowledge: 1,
-            humor: 1,
-            Creativity: 1,
-            Sports: 1,
+            Looks : 100,
+            knowledge: 100,
+            humor: 100,
+            Creativity: 100,
+            Sports: 100,
 },
         hobbies: ["👩🏻‍💻Coding", "🏏Cricket","🏸Badminton","🤖AI","🎨Graphic Designing","🎵Music"],
         socialLinks: {
@@ -34,7 +34,7 @@ const students = [
     {
         id: 2,
         name: "Priyansh Dusad",
-    profileImage: "Male.png",
+    profileImage: "images/priyansh.png",
         birthDate: new Date(2009, 8, 23),
         bio: "just another topper,friends to everone,loves australia",
         rollNumber: 31,
@@ -65,7 +65,7 @@ const students = [
     {
         id: 3 ,
         name: "Maulik Agarwal",
-        profileImage: "male.png",
+        profileImage: "images/m,.png",
         birthDate: new Date(2009, 5, 30),
         bio: "Loves doing art ",
         rollNumber: 24,
@@ -194,13 +194,13 @@ const students = [
         funname: "Kaalu",
         friends: ["Labhesh Tiwari", "Ayush Kulhari", "Mrityunjay Kumawat","Saksham Sharma","Priyansh Dusad","Vedant Dadhich","Omkar jit singh"],
         skills: {
-            Looks : 8,
+            Looks : 9,
             knowledge: 9,
             humor: 8.7,
             Creativity: 8,
             Sports: 9,
         },
-        hobbies: ["🏸Badminton", "🎵Music", ""],
+        hobbies: ["🏸Badminton", "🎵Music", "✈Travel"],
         favoriteSubjects: ["Mathematics", "Physics", "Computer Science"],
         socialLinks: {
             instagram: "https://instagram.com/akshit_agarwal",
@@ -366,21 +366,21 @@ const students = [
     {
         id: 13,
         name: "Jatin Choudhary",
-        profileImage: "Male.png",
+        profileImage: "images/jatin.png",
         birthDate: new Date(2009, 2, 15),
-        bio: "Aspiring engineer with a passion for physics and coding.",
+        bio: "Aspiring student a passion for physics.",
         rollNumber: 16,
         gender: "Male",
-        funname: "Red Phoenix",
-        friends: ["Jane Smith", "Mike Johnson", "Emma Watson"],
+        funname: "Dahi",
+        friends: ["Lavin Singh" ,"Priyansh Dusad", "Labhesh Tiwari",],
         skills: {
-            Looks : 7,
-            knowledge: 9,
-            humor: 7,
-            Creativity: 8,
-            Sports: 9,
+            Looks : 87,
+            knowledge: 91,
+            humor: 82,
+            Creativity: 50,
+            Sports: 81,
         },
-        hobbies: ["Coding", "Football", "Reading Sci-Fi"],
+        hobbies: ["🏫Learning", "➕Maths", "🏏Cricket"],
         favoriteSubjects: ["Mathematics", "Physics", "Computer Science"],
         socialLinks: {
             instagram: "https://instagram.com/johndoe",
@@ -388,10 +388,10 @@ const students = [
             x: "https://x.com/johndoe"
         },
         contact: {
-            area: "johndoe@example.com",
-            phone: "+91 9876543210"
+            area: "Shastri Nagar",
+            phone: "+91 "
         },
-        futureVision: "Leading a tech startup revolutionizing renewable energy solutions."
+        futureVision: "JEE AND NEET🤓🤓."
     },
 
     {
