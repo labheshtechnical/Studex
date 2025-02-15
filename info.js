@@ -45,13 +45,13 @@ const students = [
         friends: ["Labhesh Tiwari", "Dev Gupta", "Maulik Agarwal", "Lavin Singh" , "Ronak Soni" ,
             "Akshit Agarwal" , "Saksham Sharma" , "Ayush Kulhari " , "Jatin Choudhary","Aarnav","Yuvraj Sharma"],
         skills: {
-            Looks : 8,
+            Looks : 9.1,
             knowledge: 9.2,
             humor: 9.9,
             Creativity: 7.9,
             Sports: 9.3,
         },
-        hobbies: ["🎫Studying", "🏏Cricket", "🎶Musics and Podcast "],
+        hobbies: ["🎫Studying", "🏏Cricket", "🎶Musics "],
         favoriteSubjects: ["Mathematics", "Physics", "Computer Science"],
         socialLinks: {
             instagram: "https://instagram.com/priyanshdusad72",
