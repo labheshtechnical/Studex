@@ -133,7 +133,7 @@ const students = [
         bio: "Just Living🌗 , Loves to do Editing",
         rollNumber: 22,
         gender: "Male",
-        funname: "Rohit Sharma Ka Beta",
+        funname: "Rohit Sharma Ka Beta ,Cringe Editor",
         friends: ["Labhesh Tiwari", "Jatin Choudhary", "Yuvraj Sharma","Priyansh Dusad","Maulik Agarwal","Ronak Soni"],
         skills: {
            Looks : 9,
