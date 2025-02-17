@@ -43,7 +43,7 @@ const students = [
         gender: "Male",
         funname: "Charas Ganja",
         friends: ["Labhesh Tiwari", "Dev Gupta", "Maulik Agarwal", "Lavin Singh" , "Ronak Soni" ,
-            "Akshit Agarwal" , "Saksham Sharma" , "Ayush Kulhari " , "Jatin Choudhary","Aarnav","Yuvraj Sharma"],
+            "Akshit Agarwal" , "Saksham Sharma" , "Ayush Kulhari " , "Jatin Choudhary","Aarnav","Yuvraj Sharma","Vedant dadhich"],
         skills: {
             Looks : 9.1,
             knowledge: 9.2,
@@ -248,17 +248,17 @@ const students = [
         name: "Saksham Sharma",
         profileImage: "Male.png",
         birthDate: new Date(2009, 2, 15),
-        bio: "Aspiring engineer with a passion for physics and coding.",
+        bio: " .",
         rollNumber: 36,
         gender: "Male",
-        funname: "Red Phoenix",
-        friends: ["Jane Smith", "Mike Johnson", "Emma Watson"],
+        funname: "Chakka,Daulat sir ka beta",
+        friends: ["Akshit agarawal ", "Ayush kulhari", "Mrityunjay Kumawat","Maulik trivedi","Labhesh tiwari","Priyansh Dusad"],
         skills: {
-            Looks : 7,
-            knowledge: 9,
-            humor: 7,
-            Creativity: 8,
-            Sports: 9,
+            Looks : 8.7,
+            knowledge: 7.5,
+            humor: 8.3,
+            Creativity: 6,
+            Sports: 9.2,
         },
         hobbies: ["Coding", "Football", "Reading Sci-Fi"],
         favoriteSubjects: ["Mathematics", "Physics", "Computer Science"],
@@ -268,10 +268,10 @@ const students = [
             x: "https://x.com/johndoe"
         },
         contact: {
-            area: "johndoe@example.com",
-            phone: "+91 9876543210"
+            area: "Chandpole",
+            phone: "+91 9680196149"
         },
-        futureVision: "Leading a tech startup revolutionizing renewable energy solutions."
+        futureVision: "Chandpole m kuch toh buisness sambhal lege."
     },
     {
         id: 10,
@@ -281,14 +281,14 @@ const students = [
         bio: "Aspiring engineer with a passion for physics and coding.",
         rollNumber: 29,
         gender: "Male",
-        funname: "Red Phoenix",
-        friends: ["Jane Smith", "Mike Johnson", "Emma Watson"],
+        funname: "Bhikshuk,African",
+        friends: ["Akshit Agarwal", "Ayush Kulhari", "Saksham sharma","Labhesh Tiwari","Priyansh Dusad","Maulik Trivedi","Ronka Soni"],
         skills: {
-            Looks : 7,
+            Looks : 8.3,
             knowledge: 9,
-            humor: 7,
-            Creativity: 8,
-            Sports: 9,
+            humor: 7.8,
+            Creativity: 6,
+            Sports: 8,
         },
         hobbies: ["Coding", "Football", "Reading Sci-Fi"],
         favoriteSubjects: ["Mathematics", "Physics", "Computer Science"],
@@ -298,7 +298,7 @@ const students = [
             x: "https://x.com/johndoe"
         },
         contact: {
-            area: "johndoe@example.com",
+            area: "Sindhi Camp",
             phone: "+91 9876543210"
         },
         futureVision: "Leading a tech startup revolutionizing renewable energy solutions."
@@ -311,14 +311,14 @@ const students = [
         bio: "Aspiring engineer with a passion for physics and coding.",
         rollNumber: 42,
         gender: "Male",
-        funname: "Red Phoenix",
-        friends: ["Jane Smith", "Mike Johnson", "Emma Watson"],
+        funname: "Diva jain,Britisher",
+        friends: ["Labhesh Tiwari", "Priyansh Dusad", "Ronak soni"],
         skills: {
-            Looks : 7,
-            knowledge: 9,
+            Looks : 9,
+            knowledge: 7,
             humor: 7,
             Creativity: 8,
-            Sports: 9,
+            Sports: 8,
         },
         hobbies: ["Coding", "Football", "Reading Sci-Fi"],
         favoriteSubjects: ["Mathematics", "Physics", "Computer Science"],
@@ -328,7 +328,7 @@ const students = [
             x: "https://x.com/johndoe"
         },
         contact: {
-            area: "johndoe@example.com",
+            area: "Jhotwara",
             phone: "+91 9876543210"
         },
         futureVision: "."
@@ -376,11 +376,11 @@ const students = [
         funname: "Dahi",
         friends: ["Lavin Singh" ,"Priyansh Dusad", "Labhesh Tiwari",],
         skills: {
-            Looks : 87,
-            knowledge: 91,
-            humor: 82,
-            Creativity: 50,
-            Sports: 81,
+            Looks : 8.7,
+            knowledge: 9.6,
+            humor: 7.6,
+            Creativity: 6.0,
+            Sports: 8.1,
         },
         hobbies: ["🏫Learning", "➕Maths", "🏏Cricket"],
         favoriteSubjects: ["Mathematics", "Physics", "Computer Science"],
@@ -401,17 +401,17 @@ const students = [
         name: "Yuvraj Sharma",
         profileImage: "Male.png",
         birthDate: new Date(2009, 2, 15),
-        bio: "Aspiring engineer with a passion for physics and coding.",
+        bio: "Topperrr.",
         rollNumber: 43,
         gender: "Male",
-        funname: "Red Phoenix",
-        friends: ["Jane Smith", "Mike Johnson", "Emma Watson"],
+        funname: "Bjp dal k aadmi",
+        friends: ["Priyansh Dusad", "Labhesh Tiwari", "Lavin Singh"],
         skills: {
-            Looks : 7,
-            knowledge: 9,
-            humor: 7,
-            Creativity: 8,
-            Sports: 9,
+            Looks : 8.8,
+            knowledge: 11,
+            humor:9.4 ,
+            Creativity: 9.4,
+            Sports: 3,
         },
         hobbies: ["Coding", "Football", "Reading Sci-Fi"],
         favoriteSubjects: ["Mathematics", "Physics", "Computer Science"],
@@ -421,10 +421,10 @@ const students = [
             x: "https://x.com/johndoe"
         },
         contact: {
-            area: "johndoe@example.com",
+            area: "Jhotwara",
             phone: "+91 9876543210"
         },
-        futureVision: "Leading a tech startup revolutionizing renewable energy solutions."
+        futureVision: "Scientist."
     },
 
     {
