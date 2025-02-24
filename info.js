@@ -3,7 +3,7 @@ const students = [
     {
         id: 1,
         name: "Labhesh Tiwari          ",
-        profileImage: "images/labhesh.png",
+        profileImage: "images/pfp.png",
         birthDate: new Date(2010, 3, 19),
         bio: "Student | Coder | Sports enthusiast | Learning, laughing, leveling up! 🚀.",
         rollNumber: 20,
@@ -11,7 +11,7 @@ const students = [
         funname: "Baccha",
         friends: ["Priyansh Dusad", "Dev Gupta", "Maulik Agarwal", "Lavin Singh" , "Ronak Soni" ,
              "Akshit Agarwal" , "Saksham Sharma" , "Ayush Kulhari " , "Jatin Choudhary","Aarnav","Yuvraj Sharma",
-             "Amaad","Ayaan","Vedant Dadhich","Mrityunjay Kumawat"],
+             "Amaad","Ayaan","Vedant Dadhich","Mrityunjay Kumawat","Rudra Pratap Singh "],
         skills: {
             Looks : 100,
             knowledge: 100,
