@@ -581,32 +581,32 @@ const students = [
     {
         id: 20,
         name: "Rudra Pratap Singh",
-        profileImage: "Male.png",
-        birthDate: new Date(2009, 2, 15),
-        bio: "Aspiring engineer with a passion for physics and coding.",
+        profileImage: "images/rudra.png",
+        birthDate: new Date(2008, 6, 15),
+        bio: "CHOUDARY SAAB🎖.",
         rollNumber: 34,
         gender: "Male",
-        funname: "Red Phoenix",
-        friends: ["Jane Smith", "Mike Johnson", "Emma Watson"],
+        funname: "",
+        friends: ["Parnika Singh Negi", "Omkar jit", ""],
         skills: {
-            Looks : 7,
-            knowledge: 9,
-            humor: 7,
+            Looks : 8,
+            knowledge: 7,
+            humor: 8,
             Creativity: 8,
-            Sports: 9,
+            Sports: 8,
         },
-        hobbies: ["Coding", "Football", "Reading Sci-Fi"],
+        hobbies: ["Jo bhi usko pasand ho"],
         favoriteSubjects: ["Mathematics", "Physics", "Computer Science"],
         socialLinks: {
-            instagram: "https://instagram.com/johndoe",
-            snapchat: "https://snapchat.com/johndoe",
+            instagram: "https://instagram.com/btw_its_rudra007",
+            snapchat: "https://snapchat.com/rudra.singh15",
             x: "https://x.com/johndoe"
         },
         contact: {
-            area: "johndoe@example.com",
-            phone: "+91 9876543210"
+            area: "Army Cantonment hypercity",
+            phone: "+91 7760355122"
         },
-        futureVision: "Leading a tech startup revolutionizing renewable energy solutions."
+        futureVision: "uska husband banna."
     },
     {
         id: 21,
